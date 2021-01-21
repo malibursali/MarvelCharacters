@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12B1A6E125B9EC260092CB31 /* StoryboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B1A6E025B9EC260092CB31 /* StoryboardHelper.swift */; };
+		12B1A6E325B9EDE10092CB31 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B1A6E225B9EDE10092CB31 /* MainViewController.swift */; };
+		12B1A6E525B9EECC0092CB31 /* TabBarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B1A6E425B9EECC0092CB31 /* TabBarHelper.swift */; };
+		12B1A6E725B9F1B70092CB31 /* MainScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B1A6E625B9F1B70092CB31 /* MainScreen.storyboard */; };
 		12C46FD725B9E3A400BA8A07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C46FD625B9E3A400BA8A07 /* AppDelegate.swift */; };
 		12C46FD925B9E3A400BA8A07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C46FD825B9E3A400BA8A07 /* SceneDelegate.swift */; };
 		12C46FE125B9E3A400BA8A07 /* marvel_charactes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 12C46FDF25B9E3A400BA8A07 /* marvel_charactes.xcdatamodeld */; };
@@ -25,6 +29,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12B1A6E025B9EC260092CB31 /* StoryboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardHelper.swift; sourceTree = "<group>"; };
+		12B1A6E225B9EDE10092CB31 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		12B1A6E425B9EECC0092CB31 /* TabBarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarHelper.swift; sourceTree = "<group>"; };
+		12B1A6E625B9F1B70092CB31 /* MainScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainScreen.storyboard; sourceTree = "<group>"; };
 		12C46FD325B9E3A400BA8A07 /* marvel-charactes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "marvel-charactes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		12C46FD625B9E3A400BA8A07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12C46FD825B9E3A400BA8A07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				12C4700525B9E58A00BA8A07 /* SplashScreen.storyboard */,
+				12B1A6E625B9F1B70092CB31 /* MainScreen.storyboard */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -111,6 +120,7 @@
 			children = (
 				12C4700325B9E58000BA8A07 /* BaseViewController.swift */,
 				12C4700725B9E59700BA8A07 /* SplashViewController.swift */,
+				12B1A6E225B9EDE10092CB31 /* MainViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -154,6 +164,8 @@
 			isa = PBXGroup;
 			children = (
 				12C46FF525B9E46000BA8A07 /* TableViewCellHelper.swift */,
+				12B1A6E025B9EC260092CB31 /* StoryboardHelper.swift */,
+				12B1A6E425B9EECC0092CB31 /* TabBarHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -241,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				12C46FE325B9E3A600BA8A07 /* Assets.xcassets in Resources */,
+				12B1A6E725B9F1B70092CB31 /* MainScreen.storyboard in Resources */,
 				12C4700625B9E58A00BA8A07 /* SplashScreen.storyboard in Resources */,
 				12C4700025B9E55300BA8A07 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -256,9 +269,12 @@
 				12C46FFE25B9E4FD00BA8A07 /* CoreDataService.swift in Sources */,
 				12C46FF825B9E4BC00BA8A07 /* Utility.swift in Sources */,
 				12C4700A25B9E59F00BA8A07 /* model.swift in Sources */,
+				12B1A6E525B9EECC0092CB31 /* TabBarHelper.swift in Sources */,
 				12C46FE125B9E3A400BA8A07 /* marvel_charactes.xcdatamodeld in Sources */,
 				12C46FD725B9E3A400BA8A07 /* AppDelegate.swift in Sources */,
 				12C46FD925B9E3A400BA8A07 /* SceneDelegate.swift in Sources */,
+				12B1A6E125B9EC260092CB31 /* StoryboardHelper.swift in Sources */,
+				12B1A6E325B9EDE10092CB31 /* MainViewController.swift in Sources */,
 				12C4700425B9E58000BA8A07 /* BaseViewController.swift in Sources */,
 				12C46FFC25B9E4EF00BA8A07 /* NetworkService.swift in Sources */,
 				12C4700D25B9E5AF00BA8A07 /* StringExtension.swift in Sources */,
