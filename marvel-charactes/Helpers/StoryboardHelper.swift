@@ -11,7 +11,7 @@ import UIKit
 enum StoryboardHelper: Int {
     case splash
     case main
-    case search
+    case characters
     case favorite
     
     var name: String {
@@ -20,8 +20,8 @@ enum StoryboardHelper: Int {
             return "SplashScreen"
         case .main:
             return "MainScreen"
-        case .search:
-            return "SearchScreen"
+        case .characters:
+            return "CharactersScreen"
         case .favorite:
             return "FavoriteScreen"
         }

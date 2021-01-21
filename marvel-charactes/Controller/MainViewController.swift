@@ -19,5 +19,6 @@ class MainViewController: UITabBarController {
         super.viewDidLoad()
         
         self.setViewControllers(TabBarHelper.allCases.map{ $0.viewController }, animated: true)
+        self.tabBar.tintColor = ColorHelper.hexFA2000.color
     }
 }

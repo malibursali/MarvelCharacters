@@ -36,7 +36,8 @@ class BaseViewController: UIViewController {
     }
     
     func setupNavigationBar() {
-        
+        self.setNavigationBarColor()
+        self.setTitleAttributes()
     }
 
     
@@ -52,6 +53,22 @@ class BaseViewController: UIViewController {
     func showNavigationBar() {
         self.navigationController?.navigationBar.isHidden = false
     }
+    
+    func setTitle(_ title: String) {
+        self.title = title
+    }
+    
+    func setNavigationBarColor() {
+        self.navigationController?.navigationBar.barTintColor = ColorHelper.hexFA2000.color
+    }
+    
+    private func setTitleAttributes() {
+        let titleAttributes: [NSAttributedString.Key: Any] = [
+            NSAttributedString.Key.foregroundColor: UIColor.white
+        ]
+        
+        self.navigationController?.navigationBar.titleTextAttributes = titleAttributes
+    }
 
     func showViewController(storyboard name: String) {
         let storyboard = UIStoryboard(name: name, bundle: nil)
@@ -60,6 +77,32 @@ class BaseViewController: UIViewController {
         }
         
         self.navigationController?.show(viewController, sender: nil)
+    }
+    
+    func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        
+        alertController.addAction(okButton)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func showResponseError() {
+        self.showAlert(title: "Error", message: "Something went wrong. Please try later.")
+    }
+    
+    func showLoadingView() {
+        let loadingView = LoadingView(frame: screenSize)
+        loadingView.tag = 100
+        root?.view.addSubview(loadingView)
+        loadingView.startAnimation()
+    }
+    
+    func hideLoadingView() {
+        var loadingView = root?.view.viewWithTag(100) as? LoadingView
+        loadingView?.removeFromSuperview()
+        loadingView = nil
     }
 }
 

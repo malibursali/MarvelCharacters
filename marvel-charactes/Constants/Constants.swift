@@ -6,4 +6,9 @@
 //  Copyright © 2021 Path. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+let screenSize = UIScreen.main.bounds
+let screenWidth = UIScreen.main.bounds.width
+
+var root: UIViewController?

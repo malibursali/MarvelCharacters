@@ -7,8 +7,16 @@
 //
 
 import Foundation
+import CryptoKit
 
 public class Utility {
     static let sharedInstance = Utility()
     
+    func getHash() -> String {
+        guard let data = "\(timestamp)\(PRIVATE_API_KEY)\(PUBLIC_API_KEY)".data(using: .utf8) else { return "" }
+        let hashDigest = Insecure.MD5.hash(data: data)
+        let hash = hashDigest.map { String(format: "%02hhx", $0) }.joined()
+        
+        return hash
+    }
 }

@@ -1,5 +1,5 @@
 //
-//  model.swift
+//  CharacterResult.swift
 //  marvel-charactes
 //
 //  Created by Muhammed Ali BURSALI on 21.01.2021.
@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+struct Character: Codable {
+    var id: Int
+    var name: String
+    var thumbnail: Thumbnail
+}

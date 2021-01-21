@@ -11,7 +11,6 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    var root: UINavigationController?
     
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -24,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let viewController = storyboard.instantiateInitialViewController() else { return }
         let navigationViewController = UINavigationController(rootViewController: viewController)
         
-        self.root = navigationViewController
+        root = navigationViewController
         self.window?.rootViewController = navigationViewController
         self.window?.makeKeyAndVisible()
     }

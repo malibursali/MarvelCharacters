@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xhp-u9-Z0h">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Characters View Controller-->
+        <scene sceneID="AYH-JP-HZh">
+            <objects>
+                <viewController id="xhp-u9-Z0h" customClass="CharactersViewController" customModule="Marvel_Characters" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sow-cx-Qxg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1bN-J5-C3i">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CharacterTableViewCellID" rowHeight="161" id="LXK-st-3f6" customClass="CharacterTableViewCell" customModule="Marvel_Characters" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="161"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LXK-st-3f6" id="FIS-a9-cQb">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="161"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZJb-8a-zXF">
+                                                    <rect key="frame" x="5" y="5" width="113.5" height="151"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="ZJb-8a-zXF" secondAttribute="height" multiplier="3:4" id="zLE-Vb-Stn"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="zLE-Vb-Stn"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <include reference="zLE-Vb-Stn"/>
+                                                        </mask>
+                                                    </variation>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Batman" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSg-Vw-BQZ">
+                                                    <rect key="frame" x="128.5" y="37" width="255.5" height="22.5"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZJb-8a-zXF" firstAttribute="top" secondItem="FIS-a9-cQb" secondAttribute="top" constant="5" id="EmP-tW-2Ve"/>
+                                                <constraint firstItem="mSg-Vw-BQZ" firstAttribute="leading" secondItem="ZJb-8a-zXF" secondAttribute="trailing" constant="10" id="HlT-fi-d3D"/>
+                                                <constraint firstAttribute="bottom" secondItem="ZJb-8a-zXF" secondAttribute="bottom" constant="5" id="SJC-FK-LqS"/>
+                                                <constraint firstItem="ZJb-8a-zXF" firstAttribute="leading" secondItem="FIS-a9-cQb" secondAttribute="leading" constant="5" id="YMc-AD-rVo"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="mSg-Vw-BQZ" secondAttribute="trailing" constant="10" id="e6V-hG-34u"/>
+                                                <constraint firstItem="mSg-Vw-BQZ" firstAttribute="centerY" secondItem="FIS-a9-cQb" secondAttribute="centerY" multiplier="0.6" id="u2z-0C-88l"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="ZJb-8a-zXF"/>
+                                                    <exclude reference="mSg-Vw-BQZ"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <exclude reference="HlT-fi-d3D"/>
+                                                    <exclude reference="e6V-hG-34u"/>
+                                                    <exclude reference="u2z-0C-88l"/>
+                                                    <exclude reference="EmP-tW-2Ve"/>
+                                                    <exclude reference="SJC-FK-LqS"/>
+                                                    <exclude reference="YMc-AD-rVo"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="ZJb-8a-zXF"/>
+                                                    <include reference="mSg-Vw-BQZ"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <include reference="HlT-fi-d3D"/>
+                                                    <include reference="e6V-hG-34u"/>
+                                                    <include reference="u2z-0C-88l"/>
+                                                    <include reference="EmP-tW-2Ve"/>
+                                                    <include reference="SJC-FK-LqS"/>
+                                                    <include reference="YMc-AD-rVo"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="characterImageView" destination="ZJb-8a-zXF" id="jOB-l7-Ayp"/>
+                                            <outlet property="characterNameLabel" destination="mSg-Vw-BQZ" id="V1v-pz-vum"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="q0K-79-6kC" firstAttribute="trailing" secondItem="1bN-J5-C3i" secondAttribute="trailing" id="3z8-wP-GFr"/>
+                            <constraint firstItem="1bN-J5-C3i" firstAttribute="top" secondItem="q0K-79-6kC" secondAttribute="top" id="DGm-vs-zxE"/>
+                            <constraint firstItem="q0K-79-6kC" firstAttribute="bottom" secondItem="1bN-J5-C3i" secondAttribute="bottom" id="Ggh-Ty-KXg"/>
+                            <constraint firstItem="1bN-J5-C3i" firstAttribute="leading" secondItem="q0K-79-6kC" secondAttribute="leading" id="p5J-nX-DQX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="q0K-79-6kC"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="1bN-J5-C3i"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="DGm-vs-zxE"/>
+                                <exclude reference="p5J-nX-DQX"/>
+                                <exclude reference="3z8-wP-GFr"/>
+                                <exclude reference="Ggh-Ty-KXg"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="1bN-J5-C3i"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="DGm-vs-zxE"/>
+                                <include reference="p5J-nX-DQX"/>
+                                <include reference="3z8-wP-GFr"/>
+                                <include reference="Ggh-Ty-KXg"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="1bN-J5-C3i" id="wYx-eZ-fUW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yfj-Tr-GAd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4.3478260869565224" y="71.651785714285708"/>
+        </scene>
+    </scenes>
+</document>

@@ -6,4 +6,13 @@
 //  Copyright © 2021 Path. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+
+extension String {
+    
+    func getURL() -> URL? {
+        let url = URL(string: self)
+        return url
+    }
+}
