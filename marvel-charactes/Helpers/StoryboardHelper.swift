@@ -12,6 +12,7 @@ enum StoryboardHelper: Int {
     case splash
     case main
     case characters
+    case characterDetail
     case favorite
     
     var name: String {
@@ -22,6 +23,8 @@ enum StoryboardHelper: Int {
             return "MainScreen"
         case .characters:
             return "CharactersScreen"
+        case .characterDetail:
+            return "CharacterDetailScreen"
         case .favorite:
             return "FavoriteScreen"
         }

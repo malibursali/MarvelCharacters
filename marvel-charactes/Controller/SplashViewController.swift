@@ -30,7 +30,7 @@ class SplashViewController: BaseViewController {
         super.viewDidAppear(animated)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.showViewController(storyboard: StoryboardHelper.main.name)
+            self.showViewController(storyboard: StoryboardHelper.main.name, completion: nil)
         }
     }
     

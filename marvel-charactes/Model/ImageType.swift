@@ -17,7 +17,7 @@ enum ImageType: Int {
         case .portrait:
             return "/portrait_uncanny"
         case .landscape:
-            return "/landscape_uncanny"
+            return "/landscape_amazing"
         }
     }
 }

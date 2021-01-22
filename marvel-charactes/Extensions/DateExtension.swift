@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+extension Date {
+    func getCurrentDateAsString() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+
+        let result = formatter.string(from: self)
+
+        return result
+    }
+}

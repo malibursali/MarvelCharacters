@@ -16,11 +16,10 @@ class CharacterTableViewCell: UITableViewCell {
     @IBOutlet weak var characterImageView: UIImageView!
     @IBOutlet weak var characterNameLabel: UILabel!
     
-    var imageType: ImageType = .portrait
     var character: Character? {
         didSet {
             self.characterNameLabel.text = character?.name
-            self.characterImageView.kf.setImage(with: character?.thumbnail.getCompleteName(withImageType: self.imageType).getURL())
+            self.characterImageView.kf.setImage(with: character?.thumbnail.getCompleteName(withImageType: .portrait).getURL())
         }
     }
     

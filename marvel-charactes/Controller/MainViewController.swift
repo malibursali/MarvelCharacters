@@ -20,5 +20,10 @@ class MainViewController: UITabBarController {
         
         self.setViewControllers(TabBarHelper.allCases.map{ $0.viewController }, animated: true)
         self.tabBar.tintColor = ColorHelper.hexFA2000.color
+        
+        
+        if let viewController = self.viewControllers?.last?.children.first as? CharacterDetailViewController {
+            viewController.isFavoritePage = true
+        }
     }
 }

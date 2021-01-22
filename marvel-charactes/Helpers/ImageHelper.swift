@@ -12,6 +12,8 @@ enum ImageHelper: Int {
     case charactersIcon
     case favoriteIcon
     case loadingIcon
+    case heart
+    case heartFill
     
     var imageName: String {
         switch self {
@@ -21,11 +23,19 @@ enum ImageHelper: Int {
             return "FavoriteIcon"
         case .loadingIcon:
             return "LoadingIcon"
+        case .heart:
+            return "heart"
+        case .heartFill:
+            return "heart.fill"
         }
     }
     
     var image: UIImage? {
         return UIImage(named: self.imageName)
+    }
+    
+    var systemImage: UIImage? {
+        return UIImage(systemName: self.imageName)
     }
     
     var originalImage: UIImage? {

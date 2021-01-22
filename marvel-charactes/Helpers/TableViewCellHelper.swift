@@ -10,11 +10,17 @@ import Foundation
 
 enum TableViewCellHelper: Int {
     case character
+    case characterInfo
+    case comic
     
     var name: String {
         switch self {
         case .character:
             return "Character"
+        case .characterInfo:
+            return "CharacterInfo"
+        case .comic:
+            return "Comic"
         }
     }
     

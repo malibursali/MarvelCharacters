@@ -1,5 +1,5 @@
 //
-//  Comics.swift
+//  Comic.swift
 //  marvel-charactes
 //
 //  Created by Muhammed Ali BURSALI on 22.01.2021.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Comics: Codable {
+struct Comic: Codable {
     var id: Int
     var title: String
     var description: String

@@ -103,4 +103,14 @@ extension CharactersViewController: UITableViewDelegate, UITableViewDataSource {
             }
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let character = self.data.results[indexPath.row]
+        
+        self.showViewController(storyboard: StoryboardHelper.characterDetail.name) { (viewController) in
+            if let characterDetailViewController = viewController as? CharacterDetailViewController {
+                characterDetailViewController.character = character
+            }
+        }
+    }
 }

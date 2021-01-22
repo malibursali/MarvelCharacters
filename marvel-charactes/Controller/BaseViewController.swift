@@ -38,6 +38,7 @@ class BaseViewController: UIViewController {
     func setupNavigationBar() {
         self.setNavigationBarColor()
         self.setTitleAttributes()
+        self.setLargeTitleAttributes()
     }
 
     
@@ -59,22 +60,32 @@ class BaseViewController: UIViewController {
     }
     
     func setNavigationBarColor() {
-        self.navigationController?.navigationBar.barTintColor = ColorHelper.hexFA2000.color
+        self.navigationController?.navigationBar.barTintColor = UIColor.systemGray6
     }
     
     private func setTitleAttributes() {
         let titleAttributes: [NSAttributedString.Key: Any] = [
-            NSAttributedString.Key.foregroundColor: UIColor.white
+            NSAttributedString.Key.foregroundColor: ColorHelper.hexFA2000.color
         ]
         
         self.navigationController?.navigationBar.titleTextAttributes = titleAttributes
     }
-
-    func showViewController(storyboard name: String) {
+    
+    private func setLargeTitleAttributes() {
+        let titleAttributes: [NSAttributedString.Key: Any] = [
+            NSAttributedString.Key.foregroundColor: ColorHelper.hexFA2000.color
+        ]
+        
+        self.navigationController?.navigationBar.largeTitleTextAttributes = titleAttributes
+    }
+    
+    func showViewController(storyboard name: String, completion: ((_ viewController: UIViewController) -> Void)?) {
         let storyboard = UIStoryboard(name: name, bundle: nil)
         guard let viewController = storyboard.instantiateInitialViewController() else {
             return
         }
+        
+        completion?(viewController)
         
         self.navigationController?.show(viewController, sender: nil)
     }
@@ -102,6 +113,7 @@ class BaseViewController: UIViewController {
     func hideLoadingView() {
         var loadingView = root?.view.viewWithTag(100) as? LoadingView
         loadingView?.removeFromSuperview()
+        loadingView?.stopAnimation()
         loadingView = nil
     }
 }

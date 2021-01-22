@@ -11,6 +11,15 @@ import CryptoKit
 
 public class Utility {
     static let sharedInstance = Utility()
+    let userDefaults = UserDefaults.standard
+    
+    func saveFavoriteCharacter(_ id: Int) {
+        self.userDefaults.set(id, forKey: "Favorite")
+    }
+    
+    func getFavoriteCharacter() -> Int {
+        self.userDefaults.integer(forKey: "Favorite")
+    }
     
     func getHash() -> String {
         guard let data = "\(timestamp)\(PRIVATE_API_KEY)\(PUBLIC_API_KEY)".data(using: .utf8) else { return "" }

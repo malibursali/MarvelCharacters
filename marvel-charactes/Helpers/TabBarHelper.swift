@@ -50,7 +50,7 @@ enum TabBarHelper: Int, CaseIterable {
         case .characters:
             storyboard = UIStoryboard(name: StoryboardHelper.characters.name, bundle: nil)
         case .favorite:
-            storyboard = UIStoryboard(name: StoryboardHelper.characters.name, bundle: nil)
+            storyboard = UIStoryboard(name: StoryboardHelper.characterDetail.name, bundle: nil)
         }
         
         guard let viewController = storyboard.instantiateInitialViewController() else {

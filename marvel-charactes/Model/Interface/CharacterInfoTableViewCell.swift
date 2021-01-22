@@ -9,16 +9,31 @@
 import UIKit
 
 class CharacterInfoTableViewCell: UITableViewCell {
+    
+    //MARK: - Properties
+    
+    @IBOutlet weak var characterImageView: UIImageView!
+    @IBOutlet weak var descriptionTextView: UITextView!
+    
+    var character: Character? {
+        didSet {
+            self.descriptionTextView.text = character?.description == "" ? "No description found...": character?.description
+            self.characterImageView.kf.setImage(with: character?.thumbnail.getCompleteName(withImageType: .landscape).getURL())
+        }
+    }
+    
+    // MARK: - Initiazliers
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        self.setup()
     }
+    
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    // MARK: - Setup
+    
+    private func setup() {
+        self.descriptionTextView.font = self.descriptionTextView.font?.withSize(screenWidth*0.041)
     }
-
 }
